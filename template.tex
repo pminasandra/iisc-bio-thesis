@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%	Thesis template created by Pranav Minasandra
+%	Last modified:	10 April 2019
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, oneside, 11pt]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				USEPACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{chngcntr}
+\usepackage{scrextend}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{bold-extra}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[inline]{enumitem}
+\usepackage[tableposition=top]{caption}
+\usepackage[backend=biber,citestyle=authoryear, bibstyle=nature]{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{blindtext}
+\usepackage[hang, flushmargin]{footmisc}
+\usepackage{etoolbox}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				SETUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addbibresource{template.bib}
+
+\geometry{
+	a4paper,
+	top=1.1in,
+	bottom=1.3in,
+	inner=1.1in,
+	outer=1in
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor = red,
+	citecolor = blue
+}
+
+\captionsetup{
+	labelfont=sc
+}
+
+\graphicspath{{../Plots/}}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.35cm}
+\doublespacing
+
+\titleformat{\part}[display]{\Huge\sc\singlespacing\bfseries\centering}
+{\huge\sc\centering Part\quad\thepart\vspace{10pt}}{0pt}{}[\vspace{0.5em}]
+\titleformat{\chapter}[display]{\Huge\sc\raggedleft\bfseries\singlespacing}
+{\vspace{-50pt}\FloatBarrier\Large\sc\raggedleft Chapter \huge{\thechapter}}{0pt}{\vspace{-10pt}}[\hrule]
+\titleformat{name=\chapter,numberless}[display]{\Huge\sc\centering\bfseries\singlespacing}{}{0pt}{\vspace{-100pt}}[\vspace{-30pt}]
+\titleformat{\section}[hang]{\Large\sc\bfseries\singlespacing}
+{}{10pt}{\thesection\quad}[\vspace{-0.8em}]
+\titleformat{\subsection}[hang]{\large\sc\bfseries\singlespacing}
+{}{10pt}{\thesubsection\quad}[\vspace{-0.8em}]
+
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+\setcounter{tocdepth}{1}
+%\makeatletter
+%\titleformat{\chapter}[display]{\singlespacing\huge\scshape\raggedleft}{\vspace{-1cm}\@chapapp~\thechapter\vspace{-1cm}}{1\baselineskip}{}
+%\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				TITLE  PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\thispagestyle{empty}\begin{singlespace}
+	\Huge \vspace{-2cm}\textbf{\textsc{Mitochondria is the powerhouse of the cell}}\\ %Title here
+	\end{singlespace}
+	\normalsize
+	\vspace{4em}
+	\textsc{A Thesis submitted\\for the completion of the degree\\\textbf{\textsc{\Large{Bachelor of Science\\\normalsize(Research)}}}}\\
+}
+
+\author{by \\\large{\sc \textbf{Random Undergrad}}\\\normalsize Undergraduate Programme\\Institute of Indian Science\\[3em]
+	\includegraphics[scale=0.4]{IISc_logo.jpeg}\\[2em]
+	supervised by \\\large{\sc\bfseries Dr Interested Faculty}\\
+	Centre for Ecological Sciences\\
+	Institute of Indian Science\\[1.5em]
+}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				DOCUMENT BEGINS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagenumbering{roman}
+\renewcommand{\thepage}{0}
+\maketitle
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				NOTATION  ( UNNUMBERED  )
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter*{Abstract}
+\lipsum[1-3]
+\newpage
+\chapter*{Acknowledgements}
+\lipsum[1]
+
+\newpage
+\chapter*{Certificate}
+Mr\ Random Undergrad has worked under my supervision between May 2018 and April 2019. 
+I have gone through his work on the effects of mitochondria on being the powerhouse of a cell,
+presented in this thesis, and have found it to be satisfactory.\\
+
+\hspace*{\stretch{3}}
+Dr Interested Faculty\\
+\hspace{\stretch{1}}
+\hspace*{\stretch{3}}
+Centre for Ecological Sciences\\
+\hspace{\stretch{1}}
+\hspace*{\stretch{3}}
+Institute of Indian Science\\
+\hspace{\stretch{1}}
+
+
+\chapter*{Declaration}
+I, Random Undergrad, have under the supervision of Dr\ Interested Faculty between May 2018 and April 2019,
+participated in a project to investigate the effect of mitochondria on cell powerhouse-ness. 
+No unfair means have been used at any point in this project. All field work has been carried out with
+permission from the relevant authorities.
+All data, analyses, images, tables, and simulations in this thesis are my own.\\
+
+\hspace*{\stretch{3}}
+Random Undergrad\\
+\hspace{\stretch{1}}
+\hspace*{\stretch{3}}
+Undergraduate Programme (Biology)\\
+\hspace{\stretch{1}}
+\hspace*{\stretch{3}}
+Institute of Indian Science\\[2em]
+\hspace{\stretch{1}}
+\newpage
+
+\chapter*{Notation \& Abbreviation}
+\begin{center}
+\begin{tabular}{| c | l |}
+\hline
+	\textsc{Symbol} & \textsc{Meaning}\\
+	\hline\hline
+
+\end{tabular}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				ABBREVIATIONS  ( UNNUMBERED )
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{tabular}{| c | l |}
+\hline
+	\textsc{Abbreviation} & \textsc{Full form}\\
+	\hline\hline
+	\end{tabular}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				CONTENTS  PAGES  AND  LISTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\hypersetup{linkcolor=black}
+\begin{singlespace}
+\newpage\tableofcontents
+\newpage\listoffigures
+\newpage\listoftables
+\end{singlespace}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				CHAPTER  :  BACKGROUND  AND  SCOPE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagenumbering{arabic}
+\mainmatter
+\chapter{Introduction}
+\label{ch:intro}
+\lipsum[1-2]
+
+This is a reference to Chapter \ref{ch:intro}. This sentence contains a citation (\cite{random_citation}).
+
+\begin{figure}
+	\begin{addmargin}[0.3in]{0.3in}
+	\centering
+		\includegraphics{IISc_logo.jpeg}
+		\caption[Short Caption Here]{\small Lorem Ipsum Dolor Sit Amet Concecticur I don't know how the rest of this goes.}
+
+	\end{addmargin}
+\end{figure}
+As you can see, Figure captions are separated automatically from text. \lipsum[1-2]
+
+\section{Lorem ipsum}
+\lipsum[1-3]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\FloatBarrier
+\backmatter
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{singlespace}
+\small
+\printbibliography
+\end{singlespace}
+\end{document}
